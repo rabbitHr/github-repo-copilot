@@ -1,6 +1,9 @@
 # RepoMind — AI-Powered Codebase Q&A
 
-[![Watch the RepoMind demo](assets/ui-preview.png)](assets/REC-20260322152050%20(1).mp4)
+
+
+https://github.com/user-attachments/assets/36b2c6c2-ced7-4416-a905-e7bf94a9d0b3
+
 
 [![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
