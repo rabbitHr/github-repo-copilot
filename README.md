@@ -317,7 +317,7 @@ devmind/
 
 - Python 3.11+
 - Docker (to run Endee)
-- An [Anthropic API key](https://console.anthropic.com/)
+- A Google Gemini API key (https://aistudio.google.com)
 
 ### 1. Fork & Clone
 
@@ -364,7 +364,7 @@ Edit `.env`:
 
 ```env
 ENDEE_HOST=http://localhost:8080
-ANTHROPIC_API_KEY=sk-ant-...
+GOOGLE_API_KEY=your-gemini-key
 ```
 
 ---
@@ -440,8 +440,8 @@ pytest tests/ -v
 | `CHUNK_SIZE` | `40` | Lines per chunk |
 | `CHUNK_OVERLAP` | `8` | Overlap between consecutive chunks |
 | `TOP_K` | `5` | Number of chunks retrieved per query |
-| `ANTHROPIC_API_KEY` | _(required)_ | Your Anthropic API key |
-| `LLM_MODEL` | `claude-opus-4-20250514` | Claude model for synthesis |
+| `GOOGLE_API_KEY` | _(required)_ | Your Google Gemini API key |
+| `LLM_MODEL` | `gemini-1.5-flash` | Gemini model for synthesis |
 
 ---
 
