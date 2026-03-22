@@ -188,10 +188,10 @@ Auth lives in server/auth.py:L10-L72; the middleware attaches `user_id` from the
 ## License
 
 Apache-2.0
-# DevMind 🧠
+# GitHub Repo Copilot 🧠
 
 > **Ask your codebase questions in plain English.**  
-> DevMind indexes your entire GitHub repo into [Endee](https://github.com/endee-io/endee) — a high-performance vector database — and lets you query it semantically using natural language.
+> GitHub Repo Copilot indexes your entire GitHub repo into [Endee](https://github.com/endee-io/endee) — a high-performance vector database — and lets you query it semantically using natural language.
 
 ---
 
@@ -203,7 +203,7 @@ Large codebases are hard to navigate. Developers waste hours tracing where logic
 - *"Which functions touch the payments module?"*
 - *"How does authentication flow work?"*
 
-Keyword search (`grep`) can't answer these — it has no concept of meaning. DevMind solves this with **semantic vector search**: your code is transformed into embeddings, stored in Endee, and retrieved by meaning — not just exact words.
+Keyword search (`grep`) can't answer these — it has no concept of meaning. GitHub Repo Copilot solves this with **semantic vector search**: your code is transformed into embeddings, stored in Endee, and retrieved by meaning — not just exact words.
 
 ---
 
@@ -214,7 +214,7 @@ $ python src/agent.py
 
 You: Where is the authentication middleware applied?
 
-DevMind:
+GitHub Repo Copilot:
 Authentication middleware is applied in `src/app.py:L23-45`. The `@require_auth`
 decorator wraps all routes under `/api/v1/...` via FastAPI's dependency injection.
 The token validation itself lives in `src/auth/jwt.py:L10-38`.
@@ -257,7 +257,7 @@ Sources:
 
 ### Why Endee?
 
-Endee is a purpose-built, high-performance vector database capable of handling up to **1 billion vectors on a single node**. DevMind uses it to:
+Endee is a purpose-built, high-performance vector database capable of handling up to **1 billion vectors on a single node**. GitHub Repo Copilot uses it to:
 
 - Store overlapping code chunks as 384-dimensional cosine-space vectors
 - Perform sub-millisecond top-k similarity search at query time
@@ -296,7 +296,7 @@ Chunk IDs are derived from `MD5(filepath + start_line)` — making re-indexing s
 ## Project Structure
 
 ```
-devmind/
+github-repo-copilot/
 ├── src/
 │   ├── config.py      # All settings, loaded from .env
 │   ├── indexer.py     # File walker + chunker + Endee upsert
@@ -328,11 +328,11 @@ git clone https://github.com/<your-username>/endee
 cd endee
 ```
 
-Clone DevMind into the same workspace:
+Clone GitHub Repo Copilot into the same workspace:
 
 ```bash
-git clone https://github.com/<your-username>/devmind
-cd devmind
+git clone https://github.com/<your-username>/github-repo-copilot
+cd github-repo-copilot
 ```
 
 ### 2. Start Endee
@@ -435,7 +435,7 @@ pytest tests/ -v
 |----------|---------|-------------|
 | `ENDEE_HOST` | `http://localhost:8080` | Endee server URL |
 | `ENDEE_AUTH_TOKEN` | _(empty)_ | Auth token (leave empty for open mode) |
-| `INDEX_NAME` | `devmind_code` | Endee index name |
+| `INDEX_NAME` | `github_repo_copilot_code` | Endee index name |
 | `EMBEDDING_DIM` | `384` | Must match the embedding model |
 | `CHUNK_SIZE` | `40` | Lines per chunk |
 | `CHUNK_OVERLAP` | `8` | Overlap between consecutive chunks |
