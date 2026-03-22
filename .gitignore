@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Editor/OS
+.vscode/
+.idea/
+.DS_Store
+
+# Byte-compiled / optimized / DLL files
+*.log
+
+# Packaging
+build/
+dist/
+*.egg
+*.whl
+
+# Test and coverage
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Local data
+.env
+*.sqlite3
+
+# Images and screenshots (keep assets tracked)
+!assets/
